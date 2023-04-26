@@ -163,3 +163,5 @@ poetry.lock
 
 mount.sh
 **/.sshfs
+
+db.json

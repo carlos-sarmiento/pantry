@@ -1,6 +1,6 @@
+from backend.data.graphql import build_schema
 from strawberry.aiohttp.views import GraphQLView
 
-from .graphql.core import schema
 from aiohttp import web
 from aiohttp.web import Request
 
@@ -13,7 +13,7 @@ async def hello(request: Request):
 
 
 app = web.Application()
-app.add_routes([web.route("*", "/graphql", GraphQLView(schema=schema))])
+app.add_routes([web.route("*", "/graphql", GraphQLView(schema=build_schema()))])
 app.add_routes(routes)
 
 if __name__ == "__main__":
