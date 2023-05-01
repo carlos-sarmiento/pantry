@@ -1,5 +1,10 @@
+// "use client";
+
 import './globals.css'
+import '../fontawesome/css/fontawesome.css'
 import { Inter } from 'next/font/google'
+import 'bootstrap/dist/css/bootstrap.css';
+import CoreChrome from '@/CoreChrome';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" />
+      </head>
+      <body className={inter.className} style={{ "height": "100vh", width: "100vw" }}>
+        <CoreChrome>
+          {children}
+        </CoreChrome>
+      </body>
     </html>
   )
 }

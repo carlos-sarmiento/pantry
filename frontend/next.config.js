@@ -12,5 +12,14 @@ module.exports = {
         destination: 'http://localhost:5121/graphql/:path*'
       }
     ]
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/dashboard',
+        permanent: false,
+      },
+    ]
+  },
 }

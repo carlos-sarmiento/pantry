@@ -16,5 +16,13 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "cmake.configureOnOpen": true
+    "[typescript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+    },
+    "cmake.configureOnOpen": true,
+    "typescript.tsdk": "frontend/node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
 }
